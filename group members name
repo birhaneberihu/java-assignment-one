@@ -1,0 +1,25 @@
+
+package group.members;
+
+
+public class GroupMembers {
+
+    
+    public static void main(String[] args) {
+        System.out.println("===================================================");
+        System.out.println("=      SECTION FOUR(4) JAVA ASSIGNMENT            =");
+        System.out.println("===================================================");
+        System.out.println("=GROUP MEMBERS                 ID NUMBER          =");
+        System.out.println("===================================================");
+        System.out.println("=  1.BIRHANE BERIHU        === EITM/UR83596/07    =");
+        System.out.println("=  2.BIRHANU FENTA         === EITM/UR83598/07    =");
+        System.out.println("=  3.DIRAR TEKILE          === EITM/UR83641/07    =");
+        System.out.println("=  4.ENDANCHIYELEM AZANAW  === EITM/UR83660/07    =");
+        System.out.println("=  5.ABRAHA HADUSH         === EITM/UR83493/07    =");
+        System.out.println("=  6.NGSTI  KIDE           === EITM/UR/263716/06  =");
+        System.out.println("===================================================");
+        
+    }
+    
+}
+
