@@ -104,7 +104,7 @@ public class EncryptDecrypt {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-         String val ="Yabibal";
+         String val ="Birhane";
 		 String encrypt = Encrypt(val);
 		
 		EncryptDecrypt  op = new EncryptDecrypt();
