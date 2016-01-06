@@ -1,47 +1,49 @@
-
-package banck3;
-
 import java.util.Scanner;
 
 
 public class customer {
-         double deposit;
-        int account_number;
-        String name;
-        double balance;
-        double withdraw;
+    
+    
+    int acc_no;
+    String name;
+    double deposit;
+    double withdraw;
+    double balance;
+    
+       
     double  deposit(){
-        double x;
+        double t;
         Scanner input=new Scanner(System.in);
-      System.out.println(" enter amount to be deposit");
-      x=input.nextDouble();
-      balance+=x;
+      System.out.println(" how many birr do you want to depose");
+      t=input.nextDouble();
+      balance+=t;
       return balance;
     }
    double withdraw(){ 
-       double y;
+       double p;
         Scanner input=new Scanner(System.in);
-        System.out.println("enter  amount to be withdraw");
-        y=input.nextDouble();
-        if(y<=balance){
-        balance-=y;
+        System.out.println("how many birr do you want to withdraw");
+        p=input.nextDouble();
+        if(p<=balance){
+        balance-=p;
     } 
     else {
         
-        System.out.println("your balance is low");
+        System.out.println("sorry your balance is not enough");
         }
         return balance;
         }
        public static void main(String[] args)
        {
             String name;
-            int account_number;
-            customer bk=new customer();
-            Scanner input=new Scanner(System.in);
-            System.out.print("enter your name");
-            name=input.nextLine();
-            System.out.println("enter your account_number");
-            account_number=input.nextInt();
-            bk.deposit();
-            bk.withdraw(); 
+            int acc_no;
+            customer birhane=new customer();
+            Scanner br=new Scanner(System.in);
+            System.out.print(" please enter your name");
+            name=br.nextLine();
+            System.out.println("please enter your acc_no");
+            acc_no=br.nextInt();
+            
+            birhane.deposit();
+            birhane.withdraw(); 
 }}
