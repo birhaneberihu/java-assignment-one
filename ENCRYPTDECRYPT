@@ -1,15 +1,19 @@
+package encribtdecrypt;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.xml.stream.events.Characters;
-
-public class EncryptDecrypt {
-	static Map<String,String> Dictionary = new HashMap<String,String>(); 
+/**
+ *
+ * @author birhane
+ */
+public class EncribtDecrypt {
+static Map<String,String> Dictionary = new HashMap<String,String>(); 
 	static Map<String,String> RevDictionary = new HashMap<String,String>();
 	
-	EncryptDecrypt(){
+	    EncribtDecrypt(){
 		
-		Dictionary.put("A","%");
+                Dictionary.put("A","%");
 		Dictionary.put("a","9");
 		Dictionary.put("B","@");
 		Dictionary.put("b","#");
@@ -65,34 +69,35 @@ public class EncryptDecrypt {
 	
 	static String Encrypt(String input){
 		
-				
-		String encrypted="";
-		String character;
+            
 		char charOfString;
+		String character;
+		String ENCRYPTED="";
 		
-		for(int i=0;i<input.length();i++){
+		for(int t=0;t<input.length();t++){
 			
-			charOfString = input.charAt(i);
+			charOfString = input.charAt(t);
 			character = ""+charOfString;
 	     
 			if(Dictionary.containsKey(character)){
-	    	   encrypted =encrypted + Dictionary.get(character);
+	    	   ENCRYPTED =ENCRYPTED + Dictionary.get(character);
 	       }
 		}
 		
-		return encrypted;
+		return ENCRYPTED;
 	}	
 	
 	static String Decrypt(String input){
 		
-		String Decrypted = "";
+		
 		
 		String character;
 		char charOfString;
+                String Decrypted = "";
 		
-		for(int i=0;i<input.length();i++){
+		for(int r=0;r<input.length();r++){
 			
-			charOfString = input.charAt(i);
+			charOfString = input.charAt(r);
 			character = ""+charOfString;
 	     
 			if(Dictionary.containsKey(character)){
@@ -103,13 +108,15 @@ public class EncryptDecrypt {
 		return Decrypted;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-         String val ="Birhane";
-		 String encrypt = Encrypt(val);
+	
+         String value ="hailemisgna";
+		 String encrypt = Encrypt(value);
 		
-		EncryptDecrypt  op = new EncryptDecrypt();
-		System.out.println(op.Encrypt(val));
+		 EncribtDecrypt  uu = new  EncribtDecrypt();
+		System.out.println(uu.Encrypt(value));
 		
 	}
 
 }
+
+
