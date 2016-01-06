@@ -1,86 +1,95 @@
-package isPEOSLprogram;
-
-import java.util.Scanner;
+ 
+package posenumberpointer;
 import java.math.*;
-public class peoslNumberPrinter {
-    
-	static Scanner input = new Scanner(System.in);
+import java.util.Scanner;
+
+/**
+ *
+ * @author birhane
+ */
+public class PoseNumberpointer {
+static Scanner birhane = new Scanner(System.in);
 	static Math m;
     
 	
-	static int max(int list[]){
-       	int max =list[0];
+	static int maximum(int list[]){
+       	int maximum =list[0];
          for(int i=1;i<list.length-1;i++){
-        	 if(list[i]>max)
-        		 max = list[i];
+        	 if(list[i]>maximum)
+        		 maximum = list[i];
          }	  
-         return max;
+         return maximum;
     }
 	
-    static void  insertList(int list[],int n){
+    static void  insertList(int list[],int c){
 	 			
 		System.out.println("\nEnter the numbers one by one.\n");
 	 	
-		for(int i=0;i<n;i++){
-	 		System.out.print("Enter number "+(i+1)+":");
-	 	    list[i]=input.nextInt();
+		for(int u=0;u<c;u++){
+	 		System.out.print("Enter number "+(u+1)+":");
+	 	    list[u]=birhane.nextInt();
 		}
 	}
 	
     
-    static void display(int list[],int n){
+    static void display(int list[],int c){
     
     
     	System.out.print("\nEven Numbers: ");
-    	for(int i=0;i<n;i++){
-    		if(list[i]%2 == 0)
-    		 System.out.print(list[i]+" ");
+    	for(int u=0;u<c;u++){
+    		if(list[u]%2 == 0)
+    		 System.out.print(list[u]+" ");
     	}
     	
-   	
+    	
     	System.out.print("\nOdd Numbers: ");
-    	for(int i=0;i<n;i++){
-    		if(list[i]%2 !=0)
-    		 System.out.print(list[i]+" ");
+    	for(int u=0;u<c;u++){
+    		if(list[u]%2 !=0)
+    		 System.out.print(list[u]+" ");
     	}
     
-   //Displays all prime numbers from a list 	
+   	
     	System.out.print("\nPrime Numbers: ");
     	
-       	for(int i=0;i<n;i++){
-    		if(list[i]%2!=0 && list[i]%3!=0 && list[i]%5!=0 && list[i]%7 !=0)
-    		    System.out.print(list[i]+" ");
+       	for(int u=0;u<c;u++){
+    		if(list[u]%2!=0 && list[u]%3!=0 && list[u]%5!=0 && list[u]%7 !=0)
+    		    System.out.print(list[u]+" ");
     		  }
-   //Displays the maximum Element from the list
-    	System.out.print("\nLargest Number: ");
-    	int larg =list[0];
-    	for(int i=0;i<n;i++){
-    		if(list[i] > larg)
-    		  larg = list[i];
+   
+    	System.out.print("\n the Largest Number is: ");
+    	int Large =list[0];
+    	for(int i=0;i<c;i++){
+    		if(list[i] > Large)
+    		  Large = list[i];
     	}
-    	System.out.println(larg);
+    	System.out.println(Large);
 
-  //Displays the smallest elemtn from a list of numbers
-    	System.out.print("Smallest Number: ");
-    	int small = list[0];
-    	for(int i=0;i<n;i++){
-    		if(list[i] < small)
-    		  small= list[i];
+  
+    	System.out.print(" the Smallest Number is: ");
+    	int smalle = list[0];
+    	for(int u=0;u<c;u++){
+    		if(list[u] < smalle)
+    		  smalle= list[u];
     	}
-    	System.out.println(small);
+    	System.out.println(smalle);
     	
     }
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-       int n;
+		
+       int r;
        
        System.out.print("Enter the size of the list: ");	  	
-	   n = input.nextInt();
+	   r = birhane.nextInt();
 	   
-	   int listOne[] = new int[n];
+	   int listOne[] = new int[r];
 	   
-	   insertList(listOne,n);
-	   display(listOne,n);
+	   insertList(listOne,r);
+	   display(listOne,r);
 	}
 
 }
+
+   
+   
+    
+
