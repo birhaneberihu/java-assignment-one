@@ -14,19 +14,19 @@ static Scanner birhane = new Scanner(System.in);
 	
 	static int maximum(int list[]){
        	int maximum =list[0];
-         for(int i=1;i<list.length-1;i++){
-        	 if(list[i]>maximum)
-        		 maximum = list[i];
+         for(int u=1;i<list.length-1;u++){
+        	 if(list[u]>maximum)
+        		 maximum = list[u];
          }	  
          return maximum;
     }
 	
     static void  insertList(int list[],int c){
 	 			
-		System.out.println("\nEnter the numbers one by one.\n");
+		System.out.println("\nENTER THE NUMBERS.\n");
 	 	
 		for(int u=0;u<c;u++){
-	 		System.out.print("Enter number "+(u+1)+":");
+	 		System.out.print("PLEASE ENTER NUMBER"+(u+1)+":");
 	 	    list[u]=birhane.nextInt();
 		}
 	}
@@ -35,14 +35,14 @@ static Scanner birhane = new Scanner(System.in);
     static void display(int list[],int c){
     
     
-    	System.out.print("\nEven Numbers: ");
+    	System.out.print("\n the Even Numbers is/are= ");
     	for(int u=0;u<c;u++){
     		if(list[u]%2 == 0)
     		 System.out.print(list[u]+" ");
     	}
     	
     	
-    	System.out.print("\nOdd Numbers: ");
+    	System.out.print("\nthe Odd Number is/are= ");
     	for(int u=0;u<c;u++){
     		if(list[u]%2 !=0)
     		 System.out.print(list[u]+" ");
@@ -56,16 +56,16 @@ static Scanner birhane = new Scanner(System.in);
     		    System.out.print(list[u]+" ");
     		  }
    
-    	System.out.print("\n the Largest Number is: ");
+    	System.out.print("\n  Large= ");
     	int Large =list[0];
-    	for(int i=0;i<c;i++){
-    		if(list[i] > Large)
-    		  Large = list[i];
+    	for(int u=0;u<c;u++){
+    		if(list[u] > Large)
+    		  Large = list[u];
     	}
     	System.out.println(Large);
 
   
-    	System.out.print(" the Smallest Number is: ");
+    	System.out.print(" Smalle=: ");
     	int smalle = list[0];
     	for(int u=0;u<c;u++){
     		if(list[u] < smalle)
