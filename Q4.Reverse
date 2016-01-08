@@ -28,7 +28,7 @@ public class Reverse {
      
 		
 		String rev;
-		String str = "birhane";
+		String str = "world";
 		rev = ReverseString(str);
         System.out.println();
 		System.out.println(rev);
