@@ -12,27 +12,30 @@ import java.util.Scanner;
  * @author birhane
  */
 public class FactoAndFabio {
-static void fact(int l){
+static void fact(int j){
 	   int fact=1;	
-	 if(l != 0){	
-	   for(int p=1;p<=l;p++){
+	 if(j != 0){	
+	   for(int p=1;p<=j;p++){
 		   fact *=p; 
 	   }
 	  } 
-	   System.out.println("The Factorial of  "+l+" is="+fact);
+	   System.out.println("The Factorial of  "+j+" is="+fact);
 	}
 	
  
 	
+ 
+	
 	static void fibo(int y){
-		int r1 = 0,r2=1,r3 =0;
+			
+		int f1 = 0,f2=1,f3 =0;
 	 	System.out.print("0\t1\t");
 	 	if(y >= 2){
 	 	  for(int i=1;i<y;i++){
-	 	    r1 = r2 + r3;
-	 	    System.out.print(r3+ "\t");
-	 	    r1 = r2;
-	 	    r2 = r3; 
+	 	    f3 = f2 + f1;
+	 	    System.out.print(f3+ "\t");
+	 	    f1 = f2;
+	 	    f2 = f3; 
 	 	  }  
 	 	}
 	 	  
@@ -40,21 +43,24 @@ static void fact(int l){
 	}
 	public static void main(String[] args) {
 		
-       Scanner birhane = new Scanner(System.in);  
+       Scanner input = new Scanner(System.in);  
        
        int k;
        
        System.out.print("enter any number: ");
-       k = birhane.nextInt();
-            System.out.println("======MAIN MENU=========");
-            System.out.println("=    1.FACTORIAL       =");
-            System.out.println("=    2.FIBONASIS       =");
+       k =input.nextInt();
+            
+            System.out.println("========================");
+            System.out.println("=     MAIN MENU        ="); 
+            System.out.println("========================");
+            System.out.println("=    1.FOR FACTORIAL   =");
+            System.out.println("=    2.FOR FIBONASIS   =");
             System.out.println("========================");
        int choice;
        
-       System.out.print("\nEnter 1 for factorial. ");
-       system.out.print("\nEnter 2 for fibonacci seris\n");
-       choice = birhane.nextInt();
+       System.out.print(" please enter your choice. ");
+       
+       choice = input.nextInt();
        
        if(choice == 1)
     	   fact(k);
