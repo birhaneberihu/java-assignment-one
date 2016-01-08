@@ -8,13 +8,14 @@ import java.util.Scanner;
  * @author birhane
  */
 public class PoseNumberpointer {
-static Scanner birhane = new Scanner(System.in);
+static Scanner input = new Scanner(System.in);
 	static Math m;
     
 	
 	static int maximum(int list[]){
        	int maximum =list[0];
-         for(int u=1;i<list.length-1;u++){
+    
+         for(int u=1;u<list.length-1;u++){
         	 if(list[u]>maximum)
         		 maximum = list[u];
          }	  
@@ -23,11 +24,11 @@ static Scanner birhane = new Scanner(System.in);
 	
     static void  insertList(int list[],int c){
 	 			
-		System.out.println("\nENTER THE NUMBERS.\n");
+		System.out.println("\nENTER THE NUMBERS ONE BY ONE.\n");
 	 	
 		for(int u=0;u<c;u++){
 	 		System.out.print("PLEASE ENTER NUMBER"+(u+1)+":");
-	 	    list[u]=birhane.nextInt();
+	 	    list[u]=input.nextInt();
 		}
 	}
 	
@@ -35,28 +36,28 @@ static Scanner birhane = new Scanner(System.in);
     static void display(int list[],int c){
     
     
-    	System.out.print("\n the Even Numbers is/are= ");
+    	System.out.print("\nTHE EVEN NUMBER IS/ARE= ");
     	for(int u=0;u<c;u++){
     		if(list[u]%2 == 0)
     		 System.out.print(list[u]+" ");
     	}
     	
     	
-    	System.out.print("\nthe Odd Number is/are= ");
+    	System.out.print("\nTHE ODD NUMBER IS/ARE= ");
     	for(int u=0;u<c;u++){
     		if(list[u]%2 !=0)
     		 System.out.print(list[u]+" ");
     	}
     
    	
-    	System.out.print("\nPrime Numbers: ");
+    	System.out.print("\nTHE PRIME NUMBER IS/ARE ");
     	
        	for(int u=0;u<c;u++){
     		if(list[u]%2!=0 && list[u]%3!=0 && list[u]%5!=0 && list[u]%7 !=0)
     		    System.out.print(list[u]+" ");
     		  }
    
-    	System.out.print("\n  Large= ");
+    	System.out.print("\nTHE LARGEST NUMBER IS = ");
     	int Large =list[0];
     	for(int u=0;u<c;u++){
     		if(list[u] > Large)
@@ -65,7 +66,7 @@ static Scanner birhane = new Scanner(System.in);
     	System.out.println(Large);
 
   
-    	System.out.print(" Smalle=: ");
+    	System.out.print("THE SMALLEST NUMBER IS=: ");
     	int smalle = list[0];
     	for(int u=0;u<c;u++){
     		if(list[u] < smalle)
@@ -78,8 +79,8 @@ static Scanner birhane = new Scanner(System.in);
 		
        int r;
        
-       System.out.print("Enter the size of the list: ");	  	
-	   r = birhane.nextInt();
+       System.out.print("PLEASE ENTER THE SIZE OF THE LIST: ");	  	
+	   r = input.nextInt();
 	   
 	   int listOne[] = new int[r];
 	   
