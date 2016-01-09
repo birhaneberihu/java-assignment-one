@@ -1,49 +1,72 @@
+package bank;
+
+/**
+ *
+ * @authorbirhane
+ */
 import java.util.Scanner;
-
-
-public class customer {
-    
-    
-    int acc_no;
+public class Bank {
     String name;
-    double deposit;
-    double withdraw;
+    long account_no;
     double balance;
-    
-       
-    double  deposit(){
-        double t;
-        Scanner input=new Scanner(System.in);
-      System.out.println(" how many birr do you want to depose");
-      t=input.nextDouble();
-      balance+=t;
-      return balance;
-    }
-   double withdraw(){ 
-       double p;
-        Scanner input=new Scanner(System.in);
-        System.out.println("how many birr do you want to withdraw");
-        p=input.nextDouble();
-        if(p<=balance){
-        balance-=p;
-    } 
-    else {
+public Bank(String a,long b,double c){
+    name = a;
+    account_no = b;
+    balance = c;
+}
+public void deposit(){
+    Scanner bb =new Scanner(System.in);
+    System.out.println("Enter the money you want to diposite");
+    double dep=bb.nextDouble();
+balance=balance+dep;
+System.out.println("your balace is : "+balance);
+}
+public void withdraw(){
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the money you wish to withdraw");
+double withdraw=s.nextDouble();
+if (withdraw<=balance){
+    balance=balance-withdraw;
+System.out.println("your current balance after the withdrawal is : "+balance);}
+else {
+    System.out.println("You can not withdraw that much money from your balance.");}
+   
+}
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Welcome to dashin bank.");
+        System.out.println();
+        System.out.print("Enter your name : ");
+        String name=s.nextLine();
+        System.out.print("Enter the your account number:");
+        long  account_no=s.nextLong();
+        System.out.println("Enter your intial account:");
+        double initial_account=s.nextDouble();
+        System.out.println("ok dear "+name+" what do you want to do ?");
+        System.out.println("1--Deposite money ");
+        System.out.println("2--Withdraw money");
+        int m=s.nextInt();
+        Bank b=new Bank(name,account_no,initial_account);
+        switch(m){
+            case 1:b.deposit();
+                break;
+            case 2: b.withdraw();
+                break;
+            default :
+                System.out.println("wrong choice.");
+                break;
+        }
+        System.out.println("would you to proceed again if yes press : y");
+        System.out.println("would you to proceed again if no press : n");
+        Scanner oo=new Scanner (System.in);
+        String p=oo.nextLine();
+        String sr="y";
+        if (p.equals(sr))
+        {String[]s2=null;
+        main(s2);
+        }
+
         
-        System.out.println("sorry your balance is not enough");
-        }
-        return balance;
-        }
-       public static void main(String[] args)
-       {
-            String name;
-            int acc_no;
-            customer birhane=new customer();
-            Scanner br=new Scanner(System.in);
-            System.out.print(" please enter your name");
-            name=br.nextLine();
-            System.out.println("please enter your acc_no");
-            acc_no=br.nextInt();
-            
-            birhane.deposit();
-            birhane.withdraw(); 
-}}
+        
+    }
+}
